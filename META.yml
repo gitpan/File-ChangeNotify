@@ -1,0 +1,41 @@
+---
+name: File-ChangeNotify
+version: 0.01
+author:
+  - 'Dave Rolsky, E<gt>autarch@urth.orgE<lt>'
+abstract: 'Watch for changes to files, cross-platform style'
+license: perl
+resources:
+  license: http://dev.perl.org/licenses/
+requires:
+  Carp: 0
+  Class::MOP: 0
+  Cwd: 0
+  File::Find: 0
+  File::Spec: 0
+  FindBin: 0
+  Module::Pluggable::Object: 0
+  Moose: 0
+  MooseX::Params::Validate: 0
+  MooseX::SemiAffordanceAccessor: 0
+  Time::HiRes: 0
+build_requires:
+  File::Path: 0
+  File::Temp: 0
+  Test::More: 0
+provides:
+  File::ChangeNotify:
+    file: lib/File/ChangeNotify.pm
+    version: 0.01
+  File::ChangeNotify::Event:
+    file: lib/File/ChangeNotify/Event.pm
+  File::ChangeNotify::Watcher:
+    file: lib/File/ChangeNotify/Watcher.pm
+  File::ChangeNotify::Watcher::Default:
+    file: lib/File/ChangeNotify/Watcher/Default.pm
+  File::ChangeNotify::Watcher::Inotify:
+    file: lib/File/ChangeNotify/Watcher/Inotify.pm
+generated_by: Module::Build version 0.32
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2

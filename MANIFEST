@@ -1,0 +1,16 @@
+Build.PL
+Changes
+lib/File/ChangeNotify.pm
+lib/File/ChangeNotify/Event.pm
+lib/File/ChangeNotify/Watcher.pm
+lib/File/ChangeNotify/Watcher/Default.pm
+lib/File/ChangeNotify/Watcher/Inotify.pm
+MANIFEST			This list of files
+t/all.t
+t/kwalitee.t
+t/lib/File/ChangeNotify/TestHelper.pm
+t/pod-coverage.t
+t/pod.t
+README
+META.yml
+SIGNATURE    Added here by Module::Build
