@@ -15,13 +15,13 @@ not run its Makefile.PL or Build.PL.
 Hash: SHA1
 
 SHA1 deabc90475af76ddd9bd17b0b9729b51d216b73e Build.PL
-SHA1 be42f96b42e29aef806390c397f2141169e2ec2f Changes
+SHA1 f579a5a1ee5433f3ff24dc3e05dc3f67e3a1e39e Changes
 SHA1 e8d9c06b6b24b8dcd2710cfb4850122a0aaf6c06 MANIFEST
-SHA1 028853c7fea3e2eac1c541c3c394780cd5024e9b META.yml
+SHA1 3de7fe078804bd73d8ac221e5da00be05a12ad8a META.yml
 SHA1 5d793d32a95d9ba4c2cd9743c972797a3c00d7cd README
-SHA1 ccb5140edba1fba9202604d4e38c9d9b3095f792 lib/File/ChangeNotify.pm
+SHA1 cfd8dc8b90927a6bc02d2ca752f0a8d894efebd1 lib/File/ChangeNotify.pm
 SHA1 9ddc0ec930eb4a28ddde32df02d6a8505d9098ab lib/File/ChangeNotify/Event.pm
-SHA1 1439959adb660503a077c08cbb9332e6f65d3836 lib/File/ChangeNotify/Watcher.pm
+SHA1 c1a35becf0b0871a1a6dc82eb6b6a2f188aa130d lib/File/ChangeNotify/Watcher.pm
 SHA1 d86207c63c0f53493718345cf60015a059aea6a7 lib/File/ChangeNotify/Watcher/Default.pm
 SHA1 f40f1bf6dd6f4277785a8848c7d6d92ee7043f3e lib/File/ChangeNotify/Watcher/Inotify.pm
 SHA1 a20ef45409fdaaa48eb6c23e61c549f5578f8538 t/all.t
@@ -32,7 +32,7 @@ SHA1 d757328f50247ecdfce1ba097418cf7b426dc12e t/pod.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.9 (GNU/Linux)
 
-iEYEARECAAYFAkoHgDUACgkQ3Or3ZzQuifNHhgCgzV7wPFdNLbqO+4FJXHHTOgy0
-60QAoJFoL/3VgwiBxn7rJ4Qs3gRpF41Q
-=FEq2
+iEYEARECAAYFAkoI3kMACgkQ3Or3ZzQuifOgnwCff+x5XrE3ltkrn3qdXHbNLVLB
+3NUAn3u7rHGxqkbhkde0CtrAbVBFZzaW
+=nJBi
 -----END PGP SIGNATURE-----

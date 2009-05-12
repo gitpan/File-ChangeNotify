@@ -1,6 +1,6 @@
 ---
 name: File-ChangeNotify
-version: 0.02
+version: 0.03
 author:
   - 'Dave Rolsky, E<gt>autarch@urth.orgE<lt>'
 abstract: 'Watch for changes to files, cross-platform style'
@@ -26,7 +26,7 @@ build_requires:
 provides:
   File::ChangeNotify:
     file: lib/File/ChangeNotify.pm
-    version: 0.02
+    version: 0.03
   File::ChangeNotify::Event:
     file: lib/File/ChangeNotify/Event.pm
   File::ChangeNotify::Watcher:
