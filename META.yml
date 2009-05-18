@@ -1,6 +1,6 @@
 ---
 name: File-ChangeNotify
-version: 0.04
+version: 0.05
 author:
   - 'Dave Rolsky, E<gt>autarch@urth.orgE<lt>'
 abstract: 'Watch for changes to files, cross-platform style'
@@ -10,13 +10,11 @@ resources:
 requires:
   Carp: 0
   Class::MOP: 0
-  Cwd: 0
   File::Find: 0
   File::Spec: 0
-  FindBin: 0
   Module::Pluggable::Object: 0
   Moose: 0
-  MooseX::Params::Validate: 0
+  MooseX::Params::Validate: 0.08
   MooseX::SemiAffordanceAccessor: 0
   Time::HiRes: 0
 build_requires:
@@ -26,7 +24,7 @@ build_requires:
 provides:
   File::ChangeNotify:
     file: lib/File/ChangeNotify.pm
-    version: 0.04
+    version: 0.05
   File::ChangeNotify::Event:
     file: lib/File/ChangeNotify/Event.pm
   File::ChangeNotify::Watcher:
