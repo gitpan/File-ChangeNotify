@@ -13,4 +13,5 @@ t/pod-coverage.t
 t/pod.t
 README
 META.yml
+Makefile.PL
 SIGNATURE    Added here by Module::Build

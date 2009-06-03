@@ -7,12 +7,13 @@ SYNOPSIS
         my $watcher =
             File::ChangeNotify->instantiate_watcher
                 ( directories => [ '/my/path', '/my/other' ],
-                  regex       => qr/\.(?:pm|conf|yml)$/,
+                  filter      => qr/\.(?:pm|conf|yml)$/,
                 );
 
         if ( my @events = $watcher->new_events() ) { ... }
 
-        $watcher->watch($handler);
+        # blocking
+        while ( my @events = $watcher->wait_for_events() ) { ... }
 
 DESCRIPTION
     This module provides an API for creating a File::ChangeNotify::Watcher
@@ -25,7 +26,6 @@ METHODS
     This class provides the following methods:
 
   File::ChangeNotify->instantiate_watcher(...)
-
     This method looks at each available subclass of
     File::ChangeNotify::Watcher and instantiates the first one it can load,
     using the arguments you provided.
@@ -35,7 +35,6 @@ METHODS
     better option.
 
   File::ChangeNotify->usable_classes()
-
     Returns a list of all the loadable File::ChangeNotify::Watcher
     subclasses.
 
