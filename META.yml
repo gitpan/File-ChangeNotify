@@ -1,12 +1,16 @@
 ---
 name: File-ChangeNotify
-version: 0.07
+version: 0.08
 author:
-  - 'Dave Rolsky, E<gt>autarch@urth.orgE<lt>'
+  - 'Dave Rolsky, E<lt>autarch@urth.orgE<gt>'
 abstract: 'Watch for changes to files, cross-platform style'
 license: perl
 resources:
   license: http://dev.perl.org/licenses/
+build_requires:
+  File::Path: 0
+  File::Temp: 0
+  Test::More: 0
 requires:
   Carp: 0
   Class::MOP: 0
@@ -17,23 +21,28 @@ requires:
   MooseX::Params::Validate: 0.08
   MooseX::SemiAffordanceAccessor: 0
   Time::HiRes: 0
-build_requires:
-  File::Path: 0
-  File::Temp: 0
-  Test::More: 0
+configure_requires:
+  Module::Build: 0.35
 provides:
   File::ChangeNotify:
     file: lib/File/ChangeNotify.pm
-    version: 0.07
+    version: 0.08
   File::ChangeNotify::Event:
     file: lib/File/ChangeNotify/Event.pm
+    version: 0.08
   File::ChangeNotify::Watcher:
     file: lib/File/ChangeNotify/Watcher.pm
+    version: 0.08
   File::ChangeNotify::Watcher::Default:
     file: lib/File/ChangeNotify/Watcher/Default.pm
+    version: 0.08
   File::ChangeNotify::Watcher::Inotify:
     file: lib/File/ChangeNotify/Watcher/Inotify.pm
-generated_by: Module::Build version 0.32
+    version: 0.08
+  File::ChangeNotify::Watcher::KQueue:
+    file: lib/File/ChangeNotify/Watcher/KQueue.pm
+    version: 0.08
+generated_by: Module::Build version 0.35
 meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.2.html
-  version: 1.2
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4

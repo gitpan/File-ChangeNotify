@@ -15,25 +15,29 @@ not run its Makefile.PL or Build.PL.
 Hash: SHA1
 
 SHA1 320e201e3ad750cc11b4a5154513bbb69d252baf Build.PL
-SHA1 d4bffe5e512c8253cedef0a97b093fe5d026b8b3 Changes
-SHA1 4f9182586187ff87011f608fdd530047938dad7b MANIFEST
-SHA1 6d51a28144500d9a782c648ab72d106b5c6daeca META.yml
-SHA1 88867388dd19b387ca8e530b80067b8c20e31ddf Makefile.PL
-SHA1 d96f0fa32094aa30512dd637423804d33344c631 README
-SHA1 3a15d475daa609d5e992c00bccba85ab1c5fd867 lib/File/ChangeNotify.pm
-SHA1 9ddc0ec930eb4a28ddde32df02d6a8505d9098ab lib/File/ChangeNotify/Event.pm
-SHA1 b2a5b000a77db2b35afdf38dcf9c37ea930ec667 lib/File/ChangeNotify/Watcher.pm
-SHA1 f050fb1a27ec77d5dc803a8abbaf5993326034f1 lib/File/ChangeNotify/Watcher/Default.pm
-SHA1 ed186a6547af1786b17fe8eab13da3e819140b11 lib/File/ChangeNotify/Watcher/Inotify.pm
+SHA1 6c0bcb117963cfd5c6dd08350c74dcfc1248df14 Changes
+SHA1 e40d6e15d5589e7f9c853f7e5a7e626395a9e885 MANIFEST
+SHA1 2447e9302ec8b79d538e1375aa9a6c3443bfdd4c META.yml
+SHA1 63c491a63b40e106c8f11e011ee984298f809e48 Makefile.PL
+SHA1 87a34b42c7b238703780d6f0176cca227d48688f README
+SHA1 34dad5e8aa64545e77c09b5c7935a013e49110c2 lib/File/ChangeNotify.pm
+SHA1 1e2523262084886c866e06e3d701966802a806ce lib/File/ChangeNotify/Event.pm
+SHA1 c6adfc8acbb1a81e0798e65a0c9f250ed2860e6f lib/File/ChangeNotify/Watcher.pm
+SHA1 f8ad6a6bb0505c2ae1b7fa221ba2fb5707455cf0 lib/File/ChangeNotify/Watcher/Default.pm
+SHA1 1dd8f3109cbb4ff7c68afae2e009d51cd45549b9 lib/File/ChangeNotify/Watcher/Inotify.pm
+SHA1 1532bfde4d79f279fcc098ad930143f44ce97060 lib/File/ChangeNotify/Watcher/KQueue.pm
 SHA1 a20ef45409fdaaa48eb6c23e61c549f5578f8538 t/all.t
-SHA1 0e555408316a444690f2bfd3c7e83b38d28283cf t/kwalitee.t
-SHA1 55a197c12e8df8d178c7ea1786bd9528ebe6f966 t/lib/File/ChangeNotify/TestHelper.pm
-SHA1 801dc55c270c9733677a83354491e42fbade4799 t/pod-coverage.t
-SHA1 d757328f50247ecdfce1ba097418cf7b426dc12e t/pod.t
+SHA1 8f7c50edc33e7fc22ceba426058086052336c4bc t/excluded-dirs.t
+SHA1 7937d1a567dab6508584f4f5c5b88f4d0a03dae2 t/lib/File/ChangeNotify/TestHelper.pm
+SHA1 09190c9e56f8c73824b2fd32dc650d5530b63c68 xt/kwalitee.t
+SHA1 8e6421341f83d310a8dad8a98542c390a8570118 xt/pod-coverage.t
+SHA1 7b56d54c98bd0b66939009b19f30ad7fee5734df xt/pod-spell.t
+SHA1 8d1b5482518344568bc54528ff906481d4cc56e3 xt/pod.t
+SHA1 deebdfd5c8b0d2319e15f9941490e424f6072db5 xt/versions-match.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.9 (GNU/Linux)
 
-iEYEARECAAYFAkpI1WcACgkQ3Or3ZzQuifPKEQCfRbAWTDRy0Tpxp6L+W8+7avgz
-61sAoMA+nPbUisfOsQayJFaulEdkBL6h
-=2WkA
+iEYEARECAAYFAkrzSxkACgkQIgMCsV8qvRLQ7QCdEG984cf437c2naNz2kuAtxRu
+qd0AnjS0zSb+aO5F9hWpAt9tEGp3IZF8
+=m44B
 -----END PGP SIGNATURE-----

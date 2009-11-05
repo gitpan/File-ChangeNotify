@@ -3,36 +3,32 @@ package File::ChangeNotify;
 use strict;
 use warnings;
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 use Carp qw( confess );
 use Class::MOP;
 use Module::Pluggable::Object;
 
-sub instantiate_watcher
-{
+sub instantiate_watcher {
     my $class = shift;
 
-    for my $class ( $class->_all_classes() )
-    {
-        if ( _try_load($class) )
-        {
+    for my $class ( $class->_all_classes() ) {
+        if ( _try_load($class) ) {
             return $class->new(@_);
         }
     }
 
-    die "Could not load a File::ChangeNotify::Watcher subclass (this should not happen, something is badly broken)";
+    die
+        "Could not load a File::ChangeNotify::Watcher subclass (this should not happen, something is badly broken)";
 }
 
-sub usable_classes
-{
+sub usable_classes {
     my $class = shift;
 
     return grep { _try_load($_) } $class->_all_classes();
 }
 
-sub _try_load
-{
+sub _try_load {
     my $class = shift;
 
     eval { Class::MOP::load_class($class) };
@@ -43,21 +39,17 @@ sub _try_load
     return $e ? 0 : 1;
 }
 
-my $finder =
-    Module::Pluggable::Object->new( search_path => 'File::ChangeNotify::Watcher' );
+my $finder = Module::Pluggable::Object->new(
+    search_path => 'File::ChangeNotify::Watcher' );
 
-sub _all_classes
-{
+sub _all_classes {
     return sort _sort_classes $finder->plugins();
 }
 
-sub _sort_classes
-{
-      $a eq 'File::ChangeNotify::Watcher::Default'
-    ? 1
-    : $b eq 'File::ChangeNotify::Watcher::Default'
-    ? -1
-    : $a cmp $b;
+sub _sort_classes {
+          $a eq 'File::ChangeNotify::Watcher::Default' ? 1
+        : $b eq 'File::ChangeNotify::Watcher::Default' ? -1
+        :                                                $a cmp $b;
 }
 
 1;
@@ -113,9 +105,30 @@ is a better option.
 Returns a list of all the loadable L<File::ChangeNotify::Watcher>
 subclasses.
 
+=head1 DONATIONS
+
+If you'd like to thank me for the work I've done on this module,
+please consider making a "donation" to me via PayPal. I spend a lot of
+free time creating free software, and would appreciate any support
+you'd care to offer.
+
+Please note that B<I am not suggesting that you must do this> in order
+for me to continue working on this particular software. I will
+continue to do so, inasmuch as I have in the past, for as long as it
+interests me.
+
+Similarly, a donation made in this way will probably not make me work
+on this software much more, unless I get so many donations that I can
+consider working on free software full time, which seems unlikely at
+best.
+
+To donate, log into PayPal and send money to autarch@urth.org or use
+the button on this page:
+L<http://www.urth.org/~autarch/fs-donation.html>
+
 =head1 AUTHOR
 
-Dave Rolsky, E<gt>autarch@urth.orgE<lt>
+Dave Rolsky, E<lt>autarch@urth.orgE<gt>
 
 =head1 BUGS
 

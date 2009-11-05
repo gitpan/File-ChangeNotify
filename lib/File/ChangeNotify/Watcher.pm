@@ -3,74 +3,78 @@ package File::ChangeNotify::Watcher;
 use strict;
 use warnings;
 
+our $VERSION = '0.08';
+
 use File::ChangeNotify::Event;
+use List::MoreUtils qw(all);
 use Moose;
 use Moose::Util::TypeConstraints;
 use MooseX::Params::Validate qw( pos_validated_list );
 
-has filter =>
-    ( is      => 'ro',
-      isa     => 'RegexpRef',
-      default => sub { qr/.*/ },
-    );
+has filter => (
+    is      => 'ro',
+    isa     => 'RegexpRef',
+    default => sub {qr/.*/},
+);
 
-my $dir = subtype
-       as 'Str'
-    => where { -d $_ }
-    => message { "$_ is not a valid directory" };
+my $dir = subtype as 'Str' => where { -d $_ } =>
+    message {"$_ is not a valid directory"};
 
 my $array_of_dirs = subtype
-       as 'ArrayRef[Str]',
-    => where { map { -d } @{$_} }
-    => message { "@{$_} is not a list of valid directories" };
+    as 'ArrayRef[Str]', => where {
+    map {-d} @{$_};
+    } => message {"@{$_} is not a list of valid directories"};
 
-coerce $array_of_dirs
-    => from $dir
-    => via { [ $_ ] };
+coerce $array_of_dirs => from $dir => via { [$_] };
 
-has directories =>
-    ( is       => 'rw',
-      writer   => '_set_directories',
-      isa      => $array_of_dirs,
-      required => 1,
-      coerce   => 1,
-    );
+has directories => (
+    is       => 'rw',
+    writer   => '_set_directories',
+    isa      => $array_of_dirs,
+    required => 1,
+    coerce   => 1,
+);
 
-has follow_symlinks =>
-    ( is      => 'ro',
-      isa     => 'Bool',
-      default => 0,
-    );
+has follow_symlinks => (
+    is      => 'ro',
+    isa     => 'Bool',
+    default => 0,
+);
 
-has event_class =>
-    ( is      => 'ro',
-      isa     => 'ClassName',
-      default => 'File::ChangeNotify::Event',
-    );
+has event_class => (
+    is      => 'ro',
+    isa     => 'ClassName',
+    default => 'File::ChangeNotify::Event',
+);
 
-has sleep_interval =>
-    ( is      => 'ro',
-      isa     => 'Num',
-      default => 2,
-    );
+has sleep_interval => (
+    is      => 'ro',
+    isa     => 'Num',
+    default => 2,
+);
 
+my $files_or_regexps = subtype as 'ArrayRef[Str|RegexpRef]';
 
-sub BUILD
-{
+has exclude => (
+    is      => 'ro',
+    isa     => $files_or_regexps,
+    default => sub { [] },
+    coerce  => 1,
+);
+
+sub BUILD {
     my $self = shift;
 
     Class::MOP::load_class( $self->event_class() );
 }
 
-sub new_events
-{
+sub new_events {
     my $self = shift;
 
     return $self->_interesting_events();
 }
 
-sub _add_directory
-{
+sub _add_directory {
     my $self = shift;
     my $dir  = shift;
 
@@ -79,12 +83,29 @@ sub _add_directory
     push @{ $self->directories() }, $dir;
 }
 
-sub _remove_directory
-{
+sub _path_is_excluded {
+    my $self = shift;
+    my $path = shift;
+
+    foreach my $excluded ( @{ $self->exclude } ) {
+
+        if ( ref $excluded && ref $excluded eq 'Regexp' ) {
+            return 1 if $path =~ /$excluded/;
+        }
+        else {
+            return 1 if $path eq $excluded;
+        }
+    }
+
+    return;
+}
+
+sub _remove_directory {
     my $self = shift;
     my $dir  = shift;
 
-    $self->_set_directories( [ grep { $_ ne $dir } @{ $self->directories() } ] );
+    $self->_set_directories(
+        [ grep { $_ ne $dir } @{ $self->directories() } ] );
 }
 
 no Moose;
@@ -107,6 +128,7 @@ File::ChangeNotify::Watcher - Base class for all watchers
         File::ChangeNotify->instantiate_watcher
             ( directories => [ '/my/path', '/my/other' ],
               filter      => qr/\.(?:pm|conf|yml)$/,
+              exclude     => ['t', 'root', qr(/(?!\.)[^/]+$)],
             );
 
     if ( my @events = $watcher->new_events() ) { ... }
@@ -149,13 +171,21 @@ This method creates a new watcher. It accepts the following arguments:
 This argument is required. It can be either one or many paths which
 should be watched for changes.
 
-=item * regex => qr/.../
+=item * filter => qr/.../
 
 This is an optional regular expression that will be used to check if a
-file is of interest. This filter is only applied to files, directories
-are always included.
+file is of interest. This filter is only applied to files.
 
-By default, all files are included as well.
+By default, all files are included.
+
+=item * exclude => [...]
+
+An optional list of paths to exclude. This list can contain either plain
+strings or regular expressions. If you provide a string it should contain the
+complete path to be excluded.
+
+The paths can be either directories or specific files. If the exclusion
+matches a directory, all of its files and subdirectories are ignored.
 
 =item * follow_symlinks => $bool
 
@@ -206,7 +236,7 @@ and report on them.
 
 =head1 AUTHOR
 
-Dave Rolsky, E<gt>autarch@urth.orgE<lt>
+Dave Rolsky, E<lt>autarch@urth.orgE<gt>
 
 =head1 COPYRIGHT & LICENSE
 

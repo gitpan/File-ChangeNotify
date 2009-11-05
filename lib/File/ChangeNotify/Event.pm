@@ -3,20 +3,22 @@ package File::ChangeNotify::Event;
 use strict;
 use warnings;
 
+our $VERSION = '0.08';
+
 use Moose;
 use Moose::Util::TypeConstraints;
 
-has path =>
-    ( is       => 'ro',
-      isa      => 'Str',
-      required => 1,
-    );
+has path => (
+    is       => 'ro',
+    isa      => 'Str',
+    required => 1,
+);
 
-has type =>
-    ( is       => 'ro',
-      isa      => enum( [ qw( create modify delete unknown ) ] ),
-      required => 1,
-    );
+has type => (
+    is       => 'ro',
+    isa      => enum( [qw( create modify delete unknown )] ),
+    required => 1,
+);
 
 no Moose;
 no Moose::Util::TypeConstraints;
@@ -72,7 +74,7 @@ Returns the type of event.
 
 =head1 AUTHOR
 
-Dave Rolsky, E<gt>autarch@urth.orgE<lt>
+Dave Rolsky, E<lt>autarch@urth.orgE<gt>
 
 =head1 COPYRIGHT & LICENSE
 
