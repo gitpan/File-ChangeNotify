@@ -12,6 +12,7 @@ META.yml
 README
 t/all.t
 t/excluded-dirs.t
+t/instantiate-twice.t
 t/lib/File/ChangeNotify/TestHelper.pm
 xt/kwalitee.t
 xt/pod-coverage.t

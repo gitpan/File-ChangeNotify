@@ -15,19 +15,20 @@ not run its Makefile.PL or Build.PL.
 Hash: SHA1
 
 SHA1 320e201e3ad750cc11b4a5154513bbb69d252baf Build.PL
-SHA1 b8d9023abda64c8203470239df5b1aac0ceccca1 Changes
-SHA1 e40d6e15d5589e7f9c853f7e5a7e626395a9e885 MANIFEST
-SHA1 c7c02de100e93eca156da3c4e1b33b77589bb514 META.yml
-SHA1 63c491a63b40e106c8f11e011ee984298f809e48 Makefile.PL
+SHA1 28696b5e71f795ae095ef3220e45d8ea9e8d3538 Changes
+SHA1 36ea511abb6f5e3f82bdb8c00416c328aa01c209 MANIFEST
+SHA1 18c55a843ccde6ca39cbd91f5e09d8f5a1639bad META.yml
+SHA1 814cce029c7e7a6d7e00c5186ce98c27834816fb Makefile.PL
 SHA1 87a34b42c7b238703780d6f0176cca227d48688f README
-SHA1 5ab6f676f47f8ef0ce0860297310a52a10f8e6ff lib/File/ChangeNotify.pm
-SHA1 3a32a37b48992042e9d6116c85843bc908dceda3 lib/File/ChangeNotify/Event.pm
-SHA1 f62c3ca228ceb345a8834465594cbd78fa541f5c lib/File/ChangeNotify/Watcher.pm
-SHA1 24c1d062e20d82fa11b2c84cdc6fe0097bcddd81 lib/File/ChangeNotify/Watcher/Default.pm
-SHA1 6a3696264cdd5da6f9e1f7456eb3be50cf990295 lib/File/ChangeNotify/Watcher/Inotify.pm
-SHA1 75acb53263ad71719942d7b775d424d5002229d8 lib/File/ChangeNotify/Watcher/KQueue.pm
+SHA1 0ad6f305f83c1c1e70ddbc00662cdad194f47821 lib/File/ChangeNotify.pm
+SHA1 897bf8623edd218bb1ca274ec99bdcf8b911b2ab lib/File/ChangeNotify/Event.pm
+SHA1 ebd813718361e32a510639049d9cbb54bb12c10c lib/File/ChangeNotify/Watcher.pm
+SHA1 e6cd035d81d6ede1598274ae22f72cda1465bfff lib/File/ChangeNotify/Watcher/Default.pm
+SHA1 6f292d629bfc3c07e14d9f35c303f94b0ce74e3d lib/File/ChangeNotify/Watcher/Inotify.pm
+SHA1 62e7821e7f9637761d6811cfdc950570e402c9fb lib/File/ChangeNotify/Watcher/KQueue.pm
 SHA1 a20ef45409fdaaa48eb6c23e61c549f5578f8538 t/all.t
 SHA1 5fce136606b00c4f30c536d19efeb24f35c8394e t/excluded-dirs.t
+SHA1 2874d474b1913690b64e4dc43ddf1ce59b2d08da t/instantiate-twice.t
 SHA1 7937d1a567dab6508584f4f5c5b88f4d0a03dae2 t/lib/File/ChangeNotify/TestHelper.pm
 SHA1 09190c9e56f8c73824b2fd32dc650d5530b63c68 xt/kwalitee.t
 SHA1 8e6421341f83d310a8dad8a98542c390a8570118 xt/pod-coverage.t
@@ -37,7 +38,7 @@ SHA1 deebdfd5c8b0d2319e15f9941490e424f6072db5 xt/versions-match.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.9 (GNU/Linux)
 
-iEYEARECAAYFAkr3vZQACgkQIgMCsV8qvRLM3ACeM5Tt3LAaj4HWKzGv2zctWNfP
-P2oAoIkL/Jl9IhY8Gn6JEdT58Xrib9JM
-=eFOm
+iEYEARECAAYFAkscAE4ACgkQIgMCsV8qvRIQ8wCbB303VajhDD1h1g2Fysy57XFo
+ak8AmgLq38QIKKG6tx6wO9Q1s7nykcSt
+=Fa7E
 -----END PGP SIGNATURE-----
