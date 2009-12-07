@@ -17,22 +17,22 @@ name: File-ChangeNotify
 provides:
   File::ChangeNotify:
     file: lib/File/ChangeNotify.pm
-    version: 0.10
+    version: 0.11
   File::ChangeNotify::Event:
     file: lib/File/ChangeNotify/Event.pm
-    version: 0.10
+    version: 0.11
   File::ChangeNotify::Watcher:
     file: lib/File/ChangeNotify/Watcher.pm
-    version: 0.10
+    version: 0.11
   File::ChangeNotify::Watcher::Default:
     file: lib/File/ChangeNotify/Watcher/Default.pm
-    version: 0.10
+    version: 0.11
   File::ChangeNotify::Watcher::Inotify:
     file: lib/File/ChangeNotify/Watcher/Inotify.pm
-    version: 0.10
+    version: 0.11
   File::ChangeNotify::Watcher::KQueue:
     file: lib/File/ChangeNotify/Watcher/KQueue.pm
-    version: 0.10
+    version: 0.11
 requires:
   Carp: 0
   Class::MOP: 0
@@ -45,4 +45,4 @@ requires:
   Time::HiRes: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.10
+version: 0.11
