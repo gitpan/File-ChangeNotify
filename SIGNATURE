@@ -14,31 +14,31 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 320e201e3ad750cc11b4a5154513bbb69d252baf Build.PL
-SHA1 a740e1efdb51eb68211f64a293d6ddd7df11c130 Changes
+SHA1 2a1c3128be76ba516d06b7ed35f2861b1161a2a1 Build.PL
+SHA1 c40ea30769f2ef3aaf32c6ac109a98afcbeba473 Changes
 SHA1 36ea511abb6f5e3f82bdb8c00416c328aa01c209 MANIFEST
-SHA1 fdf6c14dec55b8750d6080ae844e3e461db18477 META.yml
-SHA1 814cce029c7e7a6d7e00c5186ce98c27834816fb Makefile.PL
+SHA1 9f90039f591f37c9c6a6b205eba339a592cb90e2 META.yml
+SHA1 776ce83add48dd0b6462c49a3a32011a230fb508 Makefile.PL
 SHA1 87a34b42c7b238703780d6f0176cca227d48688f README
-SHA1 b632191521fc45956d2935cc29c90342937ef658 lib/File/ChangeNotify.pm
-SHA1 680af9436ebf5776a5216c0726ee8b90ca219df4 lib/File/ChangeNotify/Event.pm
-SHA1 738d0d2c62a83687fcdb40dec310906b8a3f94cf lib/File/ChangeNotify/Watcher.pm
-SHA1 46cf59c5b1c33dabcf10e2f24e972c7d5045309d lib/File/ChangeNotify/Watcher/Default.pm
-SHA1 434e73fbd9f5028e6740ae1d4a46b3a4c67546d6 lib/File/ChangeNotify/Watcher/Inotify.pm
-SHA1 dd0ed0dc2ccb89e96213310d18b922c91e16b5c8 lib/File/ChangeNotify/Watcher/KQueue.pm
+SHA1 2749f2addc5927e3d7922820f8b654e966777556 lib/File/ChangeNotify.pm
+SHA1 11a1e5e6d62c4e57adc0a44124eded46dd4968ca lib/File/ChangeNotify/Event.pm
+SHA1 0a43afcb4c564ecdc529307d14575aafbc959a01 lib/File/ChangeNotify/Watcher.pm
+SHA1 8a96d8b86fa0000dfa394f02f6ebc9e405847472 lib/File/ChangeNotify/Watcher/Default.pm
+SHA1 3444e06c698a45fb54108b690cc738c3fd3d0d26 lib/File/ChangeNotify/Watcher/Inotify.pm
+SHA1 1ac4b24acd29dd73fae07846b8eafe16b49e3ccc lib/File/ChangeNotify/Watcher/KQueue.pm
 SHA1 a20ef45409fdaaa48eb6c23e61c549f5578f8538 t/all.t
 SHA1 5fce136606b00c4f30c536d19efeb24f35c8394e t/excluded-dirs.t
 SHA1 38c0e578a21df2b9481d90d38428973fdbf4aab9 t/instantiate-twice.t
 SHA1 7937d1a567dab6508584f4f5c5b88f4d0a03dae2 t/lib/File/ChangeNotify/TestHelper.pm
-SHA1 09190c9e56f8c73824b2fd32dc650d5530b63c68 xt/kwalitee.t
-SHA1 8e6421341f83d310a8dad8a98542c390a8570118 xt/pod-coverage.t
+SHA1 437178b17e5942761ac30bb436dcac115e5adff8 xt/kwalitee.t
+SHA1 53ff5f877262e1cf1f0d27c1ee78ef5938fde1ca xt/pod-coverage.t
 SHA1 e089aeb9583cff991392910d6f39155eb78a9695 xt/pod-spell.t
-SHA1 8d1b5482518344568bc54528ff906481d4cc56e3 xt/pod.t
+SHA1 9bb24d755c9e2fbf5d9b7db34df15637ccd8e3f6 xt/pod.t
 SHA1 deebdfd5c8b0d2319e15f9941490e424f6072db5 xt/versions-match.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.9 (GNU/Linux)
 
-iEYEARECAAYFAksdhBoACgkQIgMCsV8qvRKidQCfRaE+uaVZ5xv6SvuG2abcODpo
-fZkAoIwvaXnDrGpVjC0/25GrXhXVw8QV
-=0iMG
+iEYEARECAAYFAktiUwgACgkQIgMCsV8qvRK10ACfQU3fODCaG1BXOF8HPn10w8kY
+SIQAn1GlT6pQ3l4lsMfdb736f3N5v+gm
+=2K/q
 -----END PGP SIGNATURE-----
