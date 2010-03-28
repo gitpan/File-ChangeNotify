@@ -5,7 +5,7 @@ use warnings;
 
 use Moose;
 
-our $VERSION = '0.12';
+our $VERSION = '0.13';
 
 use File::Find ();
 use IO::KQueue;
@@ -170,7 +170,8 @@ sub _find {
         {
             wanted      => $wanted,
             no_chdir    => 1,
-            follow_fast => ( $self->follow_symlinks ? 1 : 0 ),
+            follow_fast => ( $self->follow_symlinks ? 1 : 0 ),,
+            follow_skip => 2,
         },
         $dir,
     );

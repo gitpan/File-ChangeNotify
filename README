@@ -54,16 +54,16 @@ DONATIONS
     best.
 
     To donate, log into PayPal and send money to autarch@urth.org or use the
-    button on this page: http://www.urth.org/~autarch/fs-donation.html
+    button on this page: <http://www.urth.org/~autarch/fs-donation.html>
 
 AUTHOR
     Dave Rolsky, <autarch@urth.org>
 
 BUGS
     Please report any bugs or feature requests to
-    `bug-file-changenotify@rt.cpan.org', or through the web interface at
-    http://rt.cpan.org. I will be notified, and then you'll automatically be
-    notified of progress on your bug as I make changes.
+    "bug-file-changenotify@rt.cpan.org", or through the web interface at
+    <http://rt.cpan.org>. I will be notified, and then you'll automatically
+    be notified of progress on your bug as I make changes.
 
 COPYRIGHT & LICENSE
     Copyright 2009 Dave Rolsky, All Rights Reserved.

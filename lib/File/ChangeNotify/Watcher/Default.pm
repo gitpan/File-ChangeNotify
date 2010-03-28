@@ -3,7 +3,7 @@ package File::ChangeNotify::Watcher::Default;
 use strict;
 use warnings;
 
-our $VERSION = '0.12';
+our $VERSION = '0.13';
 
 use File::Find qw( finddepth );
 use File::Spec;
@@ -53,7 +53,8 @@ sub _build_map {
                 $map{$path} = $entry;
             },
             follow_fast => ( $self->follow_symlinks() ? 1 : 0 ),
-            no_chdir => 1
+            no_chdir    => 1,
+            follow_skip => 2,
         },
         @{ $self->directories() },
     );

@@ -15,7 +15,7 @@ WriteMakefile
                            'Moose' => '0',
                            'MooseX::Params::Validate' => '0.08',
                            'MooseX::SemiAffordanceAccessor' => '0',
-                           'Test::More' => 0,
+                           'Test::More' => '0.88',
                            'Time::HiRes' => '0'
                          },
           'INSTALLDIRS' => 'site',

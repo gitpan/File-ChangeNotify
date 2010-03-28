@@ -20,7 +20,7 @@ my $builder = Module::Build->new(
     build_requires => {
         'File::Path' => '0',
         'File::Temp' => '0',
-        'Test::More' => '0',
+        'Test::More' => '0.88',
     },
     auto_features => {
         Inotify => {
@@ -29,7 +29,7 @@ my $builder = Module::Build->new(
         },
         KQueue => {
             description => 'KQueue support',
-            requires    => { 'IO::Kqueue' => '0' },
+            requires    => { 'IO::KQueue' => '0' },
         },
     },
     create_readme      => 1,
