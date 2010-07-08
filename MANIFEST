@@ -1,22 +1,27 @@
 Build.PL
 Changes
+INSTALL
+LICENSE
+MANIFEST
+META.json
+META.yml
+Makefile.PL
+README
+SIGNATURE
+dist.ini
+inc/MyModuleBuild.pm
 lib/File/ChangeNotify.pm
 lib/File/ChangeNotify/Event.pm
 lib/File/ChangeNotify/Watcher.pm
 lib/File/ChangeNotify/Watcher/Default.pm
 lib/File/ChangeNotify/Watcher/Inotify.pm
 lib/File/ChangeNotify/Watcher/KQueue.pm
-Makefile.PL
-MANIFEST			This list of files
-META.yml
-README
 t/all.t
 t/excluded-dirs.t
 t/instantiate-twice.t
 t/lib/File/ChangeNotify/TestHelper.pm
-xt/kwalitee.t
-xt/pod-coverage.t
-xt/pod-spell.t
-xt/pod.t
-xt/versions-match.t
-SIGNATURE    Added here by Module::Build
+t/release-eol.t
+t/release-kwalitee.t
+t/release-pod-coverage.t
+t/release-pod-spell.t
+t/release-pod.t

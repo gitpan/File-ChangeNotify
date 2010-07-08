@@ -1,9 +1,11 @@
 package File::ChangeNotify::Event;
+BEGIN {
+  $File::ChangeNotify::Event::VERSION = '0.14';
+}
 
 use strict;
 use warnings;
-
-our $VERSION = '0.13';
+use namespace::autoclean;
 
 use Moose;
 use Moose::Util::TypeConstraints;
@@ -20,18 +22,23 @@ has type => (
     required => 1,
 );
 
-no Moose;
-no Moose::Util::TypeConstraints;
-
 __PACKAGE__->meta()->make_immutable();
 
 1;
 
-__END__
+# ABSTRACT: Class for file change events
+
+
+
+=pod
 
 =head1 NAME
 
 File::ChangeNotify::Event - Class for file change events
+
+=head1 VERSION
+
+version 0.14
 
 =head1 SYNOPSIS
 
@@ -74,13 +81,18 @@ Returns the type of event.
 
 =head1 AUTHOR
 
-Dave Rolsky, E<lt>autarch@urth.orgE<gt>
+  Dave Rolsky <autarch@urth.org>
 
-=head1 COPYRIGHT & LICENSE
+=head1 COPYRIGHT AND LICENSE
 
-Copyright 2009 Dave Rolsky, All Rights Reserved.
+This software is Copyright (c) 2010 by Dave Rolsky.
 
-This program is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+This is free software, licensed under:
+
+  The Artistic License 2.0
 
 =cut
+
+
+__END__
+

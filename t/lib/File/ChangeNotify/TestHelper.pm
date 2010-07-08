@@ -56,7 +56,7 @@ sub _basic_tests {
     my $class      = shift;
     my $events_sub = shift;
 
-    my $dir = tempdir( UNLINK => 1 );
+    my $dir = tempdir( CLEANUP => 1 );
 
     my $watcher = $class->new(
         directories     => $dir,
@@ -112,7 +112,7 @@ sub _multi_event_tests {
     my $class      = shift;
     my $events_sub = shift;
 
-    my $dir = tempdir( UNLINK => 1 );
+    my $dir = tempdir( CLEANUP => 1 );
 
     my $watcher = $class->new(
         directories     => $dir,
@@ -173,7 +173,7 @@ sub _filter_tests {
     my $class      = shift;
     my $events_sub = shift;
 
-    my $dir = tempdir( UNLINK => 1 );
+    my $dir = tempdir( CLEANUP => 1 );
 
     my $watcher = $class->new(
         directories     => $dir,
@@ -207,7 +207,7 @@ sub _dir_add_remove_tests {
     my $class      = shift;
     my $events_sub = shift;
 
-    my $dir = tempdir( UNLINK => 1 );
+    my $dir = tempdir( CLEANUP => 1 );
 
     my $watcher = $class->new(
         directories     => $dir,
@@ -288,8 +288,8 @@ sub _dir_add_remove_tests {
 sub _symlink_tests {
     my $class = shift;
 
-    my $dir1 = tempdir( UNLINK => 1 );
-    my $dir2 = tempdir( UNLINK => 1 );
+    my $dir1 = tempdir( CLEANUP => 1 );
+    my $dir2 = tempdir( CLEANUP => 1 );
 
     my $symlink = "$dir1/other";
 SKIP:
@@ -338,7 +338,7 @@ SKIP:
 
         my $dir3 = tempdir( CLEANUP => 1 );
 
-        symlink "$dir3/..",              "$dir3/top";
+        symlink "$dir3/.",              "$dir3/self";
         symlink "$dir3/input-circular1", "$dir3/input-circular2";
         symlink "$dir3/input-circular2", "$dir3/input-circular1";
 

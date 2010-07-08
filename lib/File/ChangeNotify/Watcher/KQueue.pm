@@ -1,11 +1,13 @@
 package File::ChangeNotify::Watcher::KQueue;
+BEGIN {
+  $File::ChangeNotify::Watcher::KQueue::VERSION = '0.14';
+}
 
 use strict;
 use warnings;
+use namespace::autoclean;
 
 use Moose;
-
-our $VERSION = '0.13';
 
 use File::Find ();
 use IO::KQueue;
@@ -199,19 +201,21 @@ sub _watch_file {
     );
 }
 
-no Moose;
 __PACKAGE__->meta->make_immutable;
 
 1;
 
+__END__
+
 =head1 NAME
 
-File::ChangeNotify::Watcher::KQueue - KQueue-based watcher for BSD systems.
+File::ChangeNotify::Watcher::KQueue - KQueue-based watcher subclass
 
 =head1 DESCRIPTION
 
-This class implements watching using KQueue. This is a BSD alternative to
-Linux's Inotify and similar event-based systems.
+This class implements watching using L<IO::KQueue>, which must be installed
+for it to work. This is a BSD alternative to Linux's Inotify and similar
+event-based systems.
 
 =head1 CAVEATS
 
@@ -226,21 +230,22 @@ necessary. The important keys are: C<kern.maxfiles> and
 C<kern.maxfilesperproc>.  You can see how many files your system current has
 open with C<kern.openfiles>.
 
-=head1 AUTHOR
-
-Dan Thomas, E<lt>dan@cpan.orgE<gt>
-
 =head1 SUPPORT
 
 I (Dave Rolsky) cannot test this class, as I have no BSD systems. Reasonable
 patches will be applied as-is, and when possible I will consult with Dan
 Thomas or other BSD users before releasing.
 
-=head1 LICENSE
+=head1 AUTHOR
 
-Copyright 2009 Dan Thomas, All Rights Reserved.
+Dan Thomas, E<lt>dan@cpan.orgE<gt>
 
-This program is free software; you can redistribute it and/or modify it under
-the same terms as Perl itself.
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2010 by Dave Rolsky.
+
+This is free software, licensed under:
+
+  The Artistic License 2.0
 
 =cut

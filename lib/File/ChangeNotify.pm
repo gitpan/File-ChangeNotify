@@ -1,9 +1,10 @@
 package File::ChangeNotify;
+BEGIN {
+  $File::ChangeNotify::VERSION = '0.14';
+}
 
 use strict;
 use warnings;
-
-our $VERSION = '0.13';
 
 use Carp qw( confess );
 use Class::MOP;
@@ -59,13 +60,19 @@ sub _sort_classes {
 
 1;
 
-__END__
+# ABSTRACT: Watch for changes to files, cross-platform style
+
+
 
 =pod
 
 =head1 NAME
 
 File::ChangeNotify - Watch for changes to files, cross-platform style
+
+=head1 VERSION
+
+version 0.14
 
 =head1 SYNOPSIS
 
@@ -110,6 +117,13 @@ is a better option.
 Returns a list of all the loadable L<File::ChangeNotify::Watcher>
 subclasses.
 
+=head1 BUGS
+
+Please report any bugs or feature requests to
+C<bug-file-changenotify@rt.cpan.org>, or through the web interface at
+L<http://rt.cpan.org>.  I will be notified, and then you'll
+automatically be notified of progress on your bug as I make changes.
+
 =head1 DONATIONS
 
 If you'd like to thank me for the work I've done on this module,
@@ -133,20 +147,18 @@ L<http://www.urth.org/~autarch/fs-donation.html>
 
 =head1 AUTHOR
 
-Dave Rolsky, E<lt>autarch@urth.orgE<gt>
+  Dave Rolsky <autarch@urth.org>
 
-=head1 BUGS
+=head1 COPYRIGHT AND LICENSE
 
-Please report any bugs or feature requests to
-C<bug-file-changenotify@rt.cpan.org>, or through the web interface at
-L<http://rt.cpan.org>.  I will be notified, and then you'll
-automatically be notified of progress on your bug as I make changes.
+This software is Copyright (c) 2010 by Dave Rolsky.
 
-=head1 COPYRIGHT & LICENSE
+This is free software, licensed under:
 
-Copyright 2009 Dave Rolsky, All Rights Reserved.
-
-This program is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+  The Artistic License 2.0
 
 =cut
+
+
+__END__
+

@@ -1,9 +1,11 @@
 package File::ChangeNotify::Watcher::Default;
+BEGIN {
+  $File::ChangeNotify::Watcher::Default::VERSION = '0.14';
+}
 
 use strict;
 use warnings;
-
-our $VERSION = '0.13';
+use namespace::autoclean;
 
 use File::Find qw( finddepth );
 use File::Spec;
@@ -153,17 +155,23 @@ sub _interesting_events {
     return @interesting;
 }
 
-no Moose;
-
 __PACKAGE__->meta()->make_immutable();
 
 1;
 
-__END__
+# ABSTRACT: Fallback default watcher subclass
+
+
+
+=pod
 
 =head1 NAME
 
 File::ChangeNotify::Watcher::Default - Fallback default watcher subclass
+
+=head1 VERSION
+
+version 0.14
 
 =head1 DESCRIPTION
 
@@ -175,13 +183,18 @@ comparisons of the filesystem snapshot it takes.
 
 =head1 AUTHOR
 
-Dave Rolsky, E<lt>autarch@urth.orgE<gt>
+  Dave Rolsky <autarch@urth.org>
 
-=head1 COPYRIGHT & LICENSE
+=head1 COPYRIGHT AND LICENSE
 
-Copyright 2009 Dave Rolsky, All Rights Reserved.
+This software is Copyright (c) 2010 by Dave Rolsky.
 
-This program is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+This is free software, licensed under:
+
+  The Artistic License 2.0
 
 =cut
+
+
+__END__
+
