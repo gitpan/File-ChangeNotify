@@ -1,6 +1,6 @@
 package File::ChangeNotify::Watcher;
 BEGIN {
-  $File::ChangeNotify::Watcher::VERSION = '0.14';
+  $File::ChangeNotify::Watcher::VERSION = '0.15';
 }
 
 use strict;
@@ -126,7 +126,7 @@ File::ChangeNotify::Watcher - Base class for all watchers
 
 =head1 VERSION
 
-version 0.14
+version 0.15
 
 =head1 SYNOPSIS
 

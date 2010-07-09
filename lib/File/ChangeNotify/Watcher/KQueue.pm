@@ -1,6 +1,6 @@
 package File::ChangeNotify::Watcher::KQueue;
 BEGIN {
-  $File::ChangeNotify::Watcher::KQueue::VERSION = '0.14';
+  $File::ChangeNotify::Watcher::KQueue::VERSION = '0.15';
 }
 
 use strict;
