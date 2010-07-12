@@ -1,6 +1,6 @@
 package File::ChangeNotify;
 BEGIN {
-  $File::ChangeNotify::VERSION = '0.15';
+  $File::ChangeNotify::VERSION = '0.16';
 }
 
 use strict;
@@ -72,7 +72,7 @@ File::ChangeNotify - Watch for changes to files, cross-platform style
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 SYNOPSIS
 

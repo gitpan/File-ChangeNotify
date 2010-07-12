@@ -14,23 +14,23 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 d0084800ededf2d47f578542e51fff4b089bf92f Build.PL
-SHA1 44d7b8b38fe5c500373916ab87521c49626d3afe Changes
+SHA1 5765412dffd0cb2c0832e12d5ec310c93f85fe54 Build.PL
+SHA1 313adde2db3974cf8ab5f1d6bcec6594357e2819 Changes
 SHA1 9ba9a0e8afcd1cc307807eccf2edfc187db72271 INSTALL
 SHA1 23c628b4a8a36738405ccdacaeb912d2e727b4c0 LICENSE
 SHA1 a18030522165b706979dacdf0d42225c48e66eae MANIFEST
-SHA1 d81418bb4a5eb19743dcd9cd92d07d5fbdf7ba53 META.json
-SHA1 3759c51c5c391510e87f65adf08feb4951dc57e8 META.yml
-SHA1 d3562dca9c74ca1efc609ef42759300ff5a9f756 Makefile.PL
-SHA1 47f1730f154d7d2728510d6fcd5c66b8a657c7c1 README
-SHA1 eb6de504bbfce0dc5f5a2d56e4faad3b9e247688 dist.ini
+SHA1 ff8685cc9a43837631de63cd09ecd3efafc27511 META.json
+SHA1 eec653995be1c348697f37aa5ef251f9823cec0f META.yml
+SHA1 eefeb3d3720b1bb0267bb915a96e5add86ab3885 Makefile.PL
+SHA1 331c1e8e73b6eab4f1246144512e69fe89a158b1 README
+SHA1 cf52ac572e1a91c88c4db6f65e6aad21c523a53e dist.ini
 SHA1 7ade7a38764306110be102cb6b78aad66645246c inc/MyModuleBuild.pm
-SHA1 ba9ea2243cceee77e2062c5c322ce264c05bc450 lib/File/ChangeNotify.pm
-SHA1 20e2eaeab4bc37227d90e484261d3c794b23b18f lib/File/ChangeNotify/Event.pm
-SHA1 aba7d7f85ffc27dc53d8869cb669224eef84f0da lib/File/ChangeNotify/Watcher.pm
-SHA1 0bb97b67750885f85530b2b763e0724d9d66a9df lib/File/ChangeNotify/Watcher/Default.pm
-SHA1 4a908dc025d5e55e1935f12cdd1c3bf2e30f5051 lib/File/ChangeNotify/Watcher/Inotify.pm
-SHA1 f5aabc4dfab8ef812466ba9dccb82a4f191cfd0a lib/File/ChangeNotify/Watcher/KQueue.pm
+SHA1 876ccb4b953445734e4545db52457fd22de5ebcc lib/File/ChangeNotify.pm
+SHA1 76663b62bfbc2bb482d12674f2008374ffb8fab2 lib/File/ChangeNotify/Event.pm
+SHA1 91e26995306514efedace5eddc9340edd8a13905 lib/File/ChangeNotify/Watcher.pm
+SHA1 277ddc9920405a586de6c8909b3caa5637649403 lib/File/ChangeNotify/Watcher/Default.pm
+SHA1 59344eae6538c87adabfb7c4bd49a25ecdcc0d05 lib/File/ChangeNotify/Watcher/Inotify.pm
+SHA1 e1ca9d5ecaaaad24cd52cc0ef0fa9f175ef1dcd1 lib/File/ChangeNotify/Watcher/KQueue.pm
 SHA1 a20ef45409fdaaa48eb6c23e61c549f5578f8538 t/all.t
 SHA1 c4850e640da725089b03ac33ae1f87ba7a2cb7a8 t/excluded-dirs.t
 SHA1 e8a3259aff1b6f2433f03091c06e9e2c552ab1e2 t/instantiate-twice.t
@@ -43,7 +43,7 @@ SHA1 0bf5c7d045bcd17b72749ea8d57bfc2435913095 t/release-pod.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.10 (GNU/Linux)
 
-iEYEARECAAYFAkw3I9MACgkQIgMCsV8qvRIQOQCfekLPMAYfMOwOEa4q2trDwLjf
-4bQAnRLrPda9Wrh7V5sgYX2id0f193lC
-=ZlK2
+iEYEARECAAYFAkw7PacACgkQIgMCsV8qvRIGjQCfRunHp8hTk1LSQkKHANwQpUJ0
+KhoAoIXZfajcn96ysnpBCq+Z4QGOlGVs
+=SRbv
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 package File::ChangeNotify::Watcher;
 BEGIN {
-  $File::ChangeNotify::Watcher::VERSION = '0.15';
+  $File::ChangeNotify::Watcher::VERSION = '0.16';
 }
 
 use strict;
@@ -61,7 +61,6 @@ has exclude => (
     is      => 'ro',
     isa     => $files_or_regexps,
     default => sub { [] },
-    coerce  => 1,
 );
 
 sub BUILD {
@@ -126,7 +125,7 @@ File::ChangeNotify::Watcher - Base class for all watchers
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 SYNOPSIS
 
