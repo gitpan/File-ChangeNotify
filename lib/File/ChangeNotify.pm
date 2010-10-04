@@ -1,6 +1,6 @@
 package File::ChangeNotify;
 BEGIN {
-  $File::ChangeNotify::VERSION = '0.16';
+  $File::ChangeNotify::VERSION = '0.17';
 }
 
 use strict;
@@ -8,6 +8,8 @@ use warnings;
 
 use Carp qw( confess );
 use Class::MOP;
+# We load this up front to make sure that the prereq modules are installed.
+use File::ChangeNotify::Watcher::Default;
 use Module::Pluggable::Object;
 
 sub instantiate_watcher {
@@ -72,7 +74,7 @@ File::ChangeNotify - Watch for changes to files, cross-platform style
 
 =head1 VERSION
 
-version 0.16
+version 0.17
 
 =head1 SYNOPSIS
 
@@ -147,7 +149,7 @@ L<http://www.urth.org/~autarch/fs-donation.html>
 
 =head1 AUTHOR
 
-  Dave Rolsky <autarch@urth.org>
+Dave Rolsky <autarch@urth.org>
 
 =head1 COPYRIGHT AND LICENSE
 

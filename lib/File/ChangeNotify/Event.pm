@@ -1,6 +1,6 @@
 package File::ChangeNotify::Event;
 BEGIN {
-  $File::ChangeNotify::Event::VERSION = '0.16';
+  $File::ChangeNotify::Event::VERSION = '0.17';
 }
 
 use strict;
@@ -38,7 +38,7 @@ File::ChangeNotify::Event - Class for file change events
 
 =head1 VERSION
 
-version 0.16
+version 0.17
 
 =head1 SYNOPSIS
 
@@ -81,7 +81,7 @@ Returns the type of event.
 
 =head1 AUTHOR
 
-  Dave Rolsky <autarch@urth.org>
+Dave Rolsky <autarch@urth.org>
 
 =head1 COPYRIGHT AND LICENSE
 
