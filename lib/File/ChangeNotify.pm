@@ -1,6 +1,6 @@
 package File::ChangeNotify;
 BEGIN {
-  $File::ChangeNotify::VERSION = '0.17';
+  $File::ChangeNotify::VERSION = '0.18';
 }
 
 use strict;
@@ -21,8 +21,7 @@ sub instantiate_watcher {
         }
     }
 
-    die
-        "Could not load a File::ChangeNotify::Watcher subclass (this should not happen, something is badly broken)";
+    return File::ChangeNotify::Watcher::Default->new(@_);
 }
 
 {
@@ -32,32 +31,36 @@ sub instantiate_watcher {
         my $class = shift;
 
         return @usable_classes if @usable_classes;
-        return @usable_classes = grep { _try_load($_) } $class->_all_classes();
+        return @usable_classes
+            = grep { _try_load($_) } $class->_all_classes();
     }
 }
 
-sub _try_load {
-    my $class = shift;
+{
+    my %tried;
 
-    eval { Class::MOP::load_class($class) };
+    sub _try_load {
+        my $class = shift;
 
-    my $e = $@;
-    die $e if $e && $e !~ /Can\'t locate|did not return a true value/;
+        return $tried{$class}
+            if exists $tried{$class};
 
-    return $e ? 0 : 1;
+        eval { Class::MOP::load_class($class) };
+
+        my $e = $@;
+        die $e if $e && $e !~ /Can\'t locate|did not return a true value/;
+
+        return $tried{$class} = $e ? 0 : 1;
+    }
 }
 
 my $finder = Module::Pluggable::Object->new(
     search_path => 'File::ChangeNotify::Watcher' );
 
 sub _all_classes {
-    return sort _sort_classes $finder->plugins();
-}
-
-sub _sort_classes {
-          $a eq 'File::ChangeNotify::Watcher::Default' ? 1
-        : $b eq 'File::ChangeNotify::Watcher::Default' ? -1
-        :                                                $a cmp $b;
+    return
+        sort grep { $_ ne 'File::ChangeNotify::Watcher::Default' }
+        $finder->plugins();
 }
 
 1;
@@ -74,7 +77,7 @@ File::ChangeNotify - Watch for changes to files, cross-platform style
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 SYNOPSIS
 

@@ -15,6 +15,7 @@ my %WriteMakefileArgs = (
     'File::Path' => '0',
     'File::Temp' => '0',
     'Module::Build' => '0.3601',
+    'Test::Exception' => '0',
     'Test::More' => '0.88'
   },
   'CONFIGURE_REQUIRES' => {
@@ -37,7 +38,7 @@ my %WriteMakefileArgs = (
     'Time::HiRes' => '0',
     'namespace::autoclean' => '0'
   },
-  'VERSION' => '0.17',
+  'VERSION' => '0.18',
   'test' => {
     'TESTS' => 't/*.t'
   }

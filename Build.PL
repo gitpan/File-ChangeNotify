@@ -24,6 +24,7 @@ my %module_build_args = (
     'File::Path' => '0',
     'File::Temp' => '0',
     'Module::Build' => '0.3601',
+    'Test::Exception' => '0',
     'Test::More' => '0.88'
   },
   'configure_requires' => {
@@ -35,7 +36,7 @@ my %module_build_args = (
     'Dave Rolsky <autarch@urth.org>'
   ],
   'dist_name' => 'File-ChangeNotify',
-  'dist_version' => '0.17',
+  'dist_version' => '0.18',
   'license' => 'artistic_2',
   'module_name' => 'File::ChangeNotify',
   'recommends' => {},

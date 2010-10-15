@@ -43,6 +43,7 @@
          "requires" : {
             "File::Path" : 0,
             "File::Temp" : 0,
+            "Test::Exception" : 0,
             "Test::More" : "0.88"
          }
       }
@@ -59,6 +60,6 @@
          "web" : "http://hg.urth.org/hg/File-ChangeNotify"
       }
    },
-   "version" : "0.17"
+   "version" : "0.18"
 }
 
