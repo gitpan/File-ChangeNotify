@@ -1,6 +1,6 @@
 package File::ChangeNotify::Watcher::Default;
 BEGIN {
-  $File::ChangeNotify::Watcher::Default::VERSION = '0.18';
+  $File::ChangeNotify::Watcher::Default::VERSION = '0.19';
 }
 
 use strict;
@@ -171,7 +171,7 @@ File::ChangeNotify::Watcher::Default - Fallback default watcher subclass
 
 =head1 VERSION
 
-version 0.18
+version 0.19
 
 =head1 DESCRIPTION
 
