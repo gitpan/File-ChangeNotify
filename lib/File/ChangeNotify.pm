@@ -1,6 +1,6 @@
 package File::ChangeNotify;
 BEGIN {
-  $File::ChangeNotify::VERSION = '0.19';
+  $File::ChangeNotify::VERSION = '0.20';
 }
 
 use strict;
@@ -77,7 +77,7 @@ File::ChangeNotify - Watch for changes to files, cross-platform style
 
 =head1 VERSION
 
-version 0.19
+version 0.20
 
 =head1 SYNOPSIS
 
@@ -156,11 +156,11 @@ Dave Rolsky <autarch@urth.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2010 by Dave Rolsky.
+This software is Copyright (c) 2011 by Dave Rolsky.
 
 This is free software, licensed under:
 
-  The Artistic License 2.0
+  The Artistic License 2.0 (GPL Compatible)
 
 =cut
 

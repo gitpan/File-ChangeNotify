@@ -31,6 +31,7 @@ distro
 Inotify
 Linux's
 KQueue
+OpenBSD
 PayPal
 subdirectories
 userspace

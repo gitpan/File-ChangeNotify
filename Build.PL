@@ -28,7 +28,6 @@ my %module_build_args = (
     'Test::More' => '0.88'
   },
   'configure_requires' => {
-    'ExtUtils::MakeMaker' => '6.31',
     'Module::Build' => '0.3601'
   },
   'dist_abstract' => 'Watch for changes to files, cross-platform style',
@@ -36,7 +35,7 @@ my %module_build_args = (
     'Dave Rolsky <autarch@urth.org>'
   ],
   'dist_name' => 'File-ChangeNotify',
-  'dist_version' => '0.19',
+  'dist_version' => '0.20',
   'license' => 'artistic_2',
   'module_name' => 'File::ChangeNotify',
   'recommends' => {},

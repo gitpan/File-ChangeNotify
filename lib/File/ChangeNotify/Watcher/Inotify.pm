@@ -1,6 +1,6 @@
 package File::ChangeNotify::Watcher::Inotify;
 BEGIN {
-  $File::ChangeNotify::Watcher::Inotify::VERSION = '0.19';
+  $File::ChangeNotify::Watcher::Inotify::VERSION = '0.20';
 }
 
 use strict;
@@ -211,7 +211,7 @@ File::ChangeNotify::Watcher::Inotify - Inotify-based watcher subclass
 
 =head1 VERSION
 
-version 0.19
+version 0.20
 
 =head1 DESCRIPTION
 
@@ -227,11 +227,11 @@ Dave Rolsky <autarch@urth.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2010 by Dave Rolsky.
+This software is Copyright (c) 2011 by Dave Rolsky.
 
 This is free software, licensed under:
 
-  The Artistic License 2.0
+  The Artistic License 2.0 (GPL Compatible)
 
 =cut
 

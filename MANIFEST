@@ -5,7 +5,6 @@ LICENSE
 MANIFEST
 META.json
 META.yml
-Makefile.PL
 README
 SIGNATURE
 dist.ini
@@ -21,8 +20,7 @@ t/excluded-dirs.t
 t/instantiate-twice.t
 t/lib/File/ChangeNotify/TestHelper.pm
 t/release-eol.t
-t/release-kwalitee.t
 t/release-pod-coverage.t
 t/release-pod-spell.t
-t/release-pod.t
+t/release-pod-syntax.t
 t/release-try-load.t
