@@ -1,6 +1,6 @@
 package File::ChangeNotify::Watcher::Default;
-BEGIN {
-  $File::ChangeNotify::Watcher::Default::VERSION = '0.20';
+{
+  $File::ChangeNotify::Watcher::Default::VERSION = '0.21';
 }
 
 use strict;
@@ -171,7 +171,7 @@ File::ChangeNotify::Watcher::Default - Fallback default watcher subclass
 
 =head1 VERSION
 
-version 0.20
+version 0.21
 
 =head1 DESCRIPTION
 
@@ -187,7 +187,7 @@ Dave Rolsky <autarch@urth.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2011 by Dave Rolsky.
+This software is Copyright (c) 2012 by Dave Rolsky.
 
 This is free software, licensed under:
 

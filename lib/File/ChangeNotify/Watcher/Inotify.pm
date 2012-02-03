@@ -1,6 +1,6 @@
 package File::ChangeNotify::Watcher::Inotify;
-BEGIN {
-  $File::ChangeNotify::Watcher::Inotify::VERSION = '0.20';
+{
+  $File::ChangeNotify::Watcher::Inotify::VERSION = '0.21';
 }
 
 use strict;
@@ -28,9 +28,10 @@ has _inotify => (
 );
 
 has _mask => (
-    is         => 'ro',
-    isa        => 'Int',
-    lazy_build => 1,
+    is      => 'ro',
+    isa     => 'Int',
+    lazy    => 1,
+    builder => '_build_mask',
 );
 
 sub sees_all_events {1}
@@ -78,6 +79,12 @@ sub _interesting_events {
     # something happens. The restarter will end up calling ->watch
     # again after handling the changes.
     for my $event ( $self->_inotify()->read() ) {
+        # An excluded path will show up here if ...
+        #
+        # Something created a new directory and that directory needs to be
+        # excluded or when the exclusion excludes a file, not a dir.
+        next if $self->_path_is_excluded( $event->fullname() );
+
         if ( $event->IN_CREATE() && $event->IN_ISDIR() ) {
             $self->_watch_directory( $event->fullname() );
             push @interesting, $event;
@@ -98,7 +105,7 @@ sub _interesting_events {
         map { $_->can('path') ? $_ : $self->_convert_event($_) } @interesting;
 }
 
-sub _build__mask {
+sub _build_mask {
     my $self = shift;
 
     my $mask
@@ -211,7 +218,7 @@ File::ChangeNotify::Watcher::Inotify - Inotify-based watcher subclass
 
 =head1 VERSION
 
-version 0.20
+version 0.21
 
 =head1 DESCRIPTION
 
@@ -227,7 +234,7 @@ Dave Rolsky <autarch@urth.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2011 by Dave Rolsky.
+This software is Copyright (c) 2012 by Dave Rolsky.
 
 This is free software, licensed under:
 

@@ -6,7 +6,6 @@ MANIFEST
 META.json
 META.yml
 README
-SIGNATURE
 dist.ini
 inc/MyModuleBuild.pm
 lib/File/ChangeNotify.pm
@@ -19,8 +18,10 @@ t/all.t
 t/excluded-dirs.t
 t/instantiate-twice.t
 t/lib/File/ChangeNotify/TestHelper.pm
+t/release-cpan-changes.t
 t/release-eol.t
 t/release-pod-coverage.t
+t/release-pod-no404s.t
 t/release-pod-spell.t
 t/release-pod-syntax.t
 t/release-try-load.t

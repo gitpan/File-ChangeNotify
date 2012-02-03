@@ -1,6 +1,6 @@
 package File::ChangeNotify::Watcher;
-BEGIN {
-  $File::ChangeNotify::Watcher::VERSION = '0.20';
+{
+  $File::ChangeNotify::Watcher::VERSION = '0.21';
 }
 
 use strict;
@@ -19,18 +19,24 @@ has filter => (
     default => sub {qr/.*/},
 );
 
-my $dir = subtype as 'Str' => where { -d $_ } =>
-    message {"$_ is not a valid directory"};
+#<<<
+my $dir = subtype as 'Str',
+    where { -d $_ },
+    message { "$_ is not a valid directory" };
 
-my $array_of_dirs = subtype
-    as 'ArrayRef[Str]', => where {
-    map {-d} @{$_};
-    } => message {"@{$_} is not a list of valid directories"};
+my $array_of_dirs = subtype as 'ArrayRef[Str]',
+    where {
+        map {-d} @{$_};
+    },
+    message {"@{$_} is not a list of valid directories"};
 
-coerce $array_of_dirs => from $dir => via { [$_] };
+coerce $array_of_dirs,
+    from $dir,
+    via { [$_] };
+#>>>
 
 has directories => (
-    is       => 'rw',
+    is       => 'ro',
     writer   => '_set_directories',
     isa      => $array_of_dirs,
     required => 1,
@@ -125,7 +131,7 @@ File::ChangeNotify::Watcher - Base class for all watchers
 
 =head1 VERSION
 
-version 0.20
+version 0.21
 
 =head1 SYNOPSIS
 
@@ -245,7 +251,7 @@ Dave Rolsky <autarch@urth.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2011 by Dave Rolsky.
+This software is Copyright (c) 2012 by Dave Rolsky.
 
 This is free software, licensed under:
 

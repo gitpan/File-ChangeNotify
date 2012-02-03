@@ -4,7 +4,7 @@
       "Dave Rolsky <autarch@urth.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.200004, CPAN::Meta::Converter version 2.110580",
+   "generated_by" : "Dist::Zilla version 4.300006, CPAN::Meta::Converter version 2.113640",
    "license" : [
       "artistic_2"
    ],
@@ -27,23 +27,32 @@
       "runtime" : {
          "requires" : {
             "Carp" : 0,
-            "Class::MOP" : 0,
+            "Class::Load" : 0,
             "File::Find" : 0,
             "File::Spec" : 0,
+            "List::MoreUtils" : 0,
             "Module::Pluggable::Object" : 0,
             "Moose" : 0,
-            "MooseX::Params::Validate" : "0.08",
+            "Moose::Util::TypeConstraints" : 0,
+            "MooseX::Params::Validate" : 0,
             "MooseX::SemiAffordanceAccessor" : 0,
             "Time::HiRes" : 0,
-            "namespace::autoclean" : 0
+            "namespace::autoclean" : 0,
+            "perl" : "5.010",
+            "strict" : 0,
+            "warnings" : 0
          }
       },
       "test" : {
          "requires" : {
+            "Data::Dumper" : 0,
+            "Exporter" : 0,
             "File::Path" : 0,
             "File::Temp" : 0,
+            "FindBin" : 0,
             "Test::Exception" : 0,
-            "Test::More" : "0.88"
+            "Test::More" : 0,
+            "base" : 0
          }
       }
    },
@@ -54,11 +63,11 @@
          "web" : "http://rt.cpan.org/NoAuth/Bugs.html?Dist=File-ChangeNotify"
       },
       "repository" : {
-         "type" : "hg",
-         "url" : "http://hg.urth.org/hg/File-ChangeNotify",
-         "web" : "http://hg.urth.org/hg/File-ChangeNotify"
+         "type" : "git",
+         "url" : "git://git.urth.org/File-ChangeNotify.git",
+         "web" : "http://git.urth.org/File-ChangeNotify.git"
       }
    },
-   "version" : "0.20"
+   "version" : "0.21"
 }
 

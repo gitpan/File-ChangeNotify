@@ -6,53 +6,62 @@ use Module::Build 0.3601;
 
 
 my %module_build_args = (
-  'auto_features' => {
-    'Inotify' => {
-      'description' => 'Inotify support',
-      'requires' => {
-        'Linux::Inotify2' => '1.2'
+  "auto_features" => {
+    "Inotify" => {
+      "description" => "Inotify support",
+      "requires" => {
+        "Linux::Inotify2" => "1.2"
       }
     },
-    'KQueue' => {
-      'description' => 'KQueue support',
-      'requires' => {
-        'IO::KQueue' => '0'
+    "KQueue" => {
+      "description" => "KQueue support",
+      "requires" => {
+        "IO::KQueue" => 0
       }
     }
   },
-  'build_requires' => {
-    'File::Path' => '0',
-    'File::Temp' => '0',
-    'Module::Build' => '0.3601',
-    'Test::Exception' => '0',
-    'Test::More' => '0.88'
+  "build_requires" => {
+    "Data::Dumper" => 0,
+    "Exporter" => 0,
+    "File::Path" => 0,
+    "File::Temp" => 0,
+    "FindBin" => 0,
+    "Module::Build" => "0.3601",
+    "Test::Exception" => 0,
+    "Test::More" => 0,
+    "base" => 0
   },
-  'configure_requires' => {
-    'Module::Build' => '0.3601'
+  "configure_requires" => {
+    "Module::Build" => "0.3601"
   },
-  'dist_abstract' => 'Watch for changes to files, cross-platform style',
-  'dist_author' => [
-    'Dave Rolsky <autarch@urth.org>'
+  "dist_abstract" => "Watch for changes to files, cross-platform style",
+  "dist_author" => [
+    "Dave Rolsky <autarch\@urth.org>"
   ],
-  'dist_name' => 'File-ChangeNotify',
-  'dist_version' => '0.20',
-  'license' => 'artistic_2',
-  'module_name' => 'File::ChangeNotify',
-  'recommends' => {},
-  'recursive_test_files' => 1,
-  'requires' => {
-    'Carp' => '0',
-    'Class::MOP' => '0',
-    'File::Find' => '0',
-    'File::Spec' => '0',
-    'Module::Pluggable::Object' => '0',
-    'Moose' => '0',
-    'MooseX::Params::Validate' => '0.08',
-    'MooseX::SemiAffordanceAccessor' => '0',
-    'Time::HiRes' => '0',
-    'namespace::autoclean' => '0'
+  "dist_name" => "File-ChangeNotify",
+  "dist_version" => "0.21",
+  "license" => "artistic_2",
+  "module_name" => "File::ChangeNotify",
+  "recommends" => {},
+  "recursive_test_files" => 1,
+  "requires" => {
+    "Carp" => 0,
+    "Class::Load" => 0,
+    "File::Find" => 0,
+    "File::Spec" => 0,
+    "List::MoreUtils" => 0,
+    "Module::Pluggable::Object" => 0,
+    "Moose" => 0,
+    "Moose::Util::TypeConstraints" => 0,
+    "MooseX::Params::Validate" => 0,
+    "MooseX::SemiAffordanceAccessor" => 0,
+    "Time::HiRes" => 0,
+    "namespace::autoclean" => 0,
+    "perl" => "5.010",
+    "strict" => 0,
+    "warnings" => 0
   },
-  'script_files' => []
+  "script_files" => []
 );
 
 

@@ -1,13 +1,14 @@
 package File::ChangeNotify;
-BEGIN {
-  $File::ChangeNotify::VERSION = '0.20';
+{
+  $File::ChangeNotify::VERSION = '0.21';
 }
 
 use strict;
 use warnings;
+use 5.010;
 
 use Carp qw( confess );
-use Class::MOP;
+use Class::Load qw( load_class );
 # We load this up front to make sure that the prereq modules are installed.
 use File::ChangeNotify::Watcher::Default;
 use Module::Pluggable::Object;
@@ -45,7 +46,7 @@ sub instantiate_watcher {
         return $tried{$class}
             if exists $tried{$class};
 
-        eval { Class::MOP::load_class($class) };
+        eval { load_class($class) };
 
         my $e = $@;
         die $e if $e && $e !~ /Can\'t locate|did not return a true value/;
@@ -77,7 +78,7 @@ File::ChangeNotify - Watch for changes to files, cross-platform style
 
 =head1 VERSION
 
-version 0.20
+version 0.21
 
 =head1 SYNOPSIS
 
@@ -156,7 +157,7 @@ Dave Rolsky <autarch@urth.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2011 by Dave Rolsky.
+This software is Copyright (c) 2012 by Dave Rolsky.
 
 This is free software, licensed under:
 

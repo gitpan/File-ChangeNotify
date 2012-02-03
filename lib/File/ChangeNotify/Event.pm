@@ -1,6 +1,6 @@
 package File::ChangeNotify::Event;
-BEGIN {
-  $File::ChangeNotify::Event::VERSION = '0.20';
+{
+  $File::ChangeNotify::Event::VERSION = '0.21';
 }
 
 use strict;
@@ -38,7 +38,7 @@ File::ChangeNotify::Event - Class for file change events
 
 =head1 VERSION
 
-version 0.20
+version 0.21
 
 =head1 SYNOPSIS
 
@@ -85,7 +85,7 @@ Dave Rolsky <autarch@urth.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2011 by Dave Rolsky.
+This software is Copyright (c) 2012 by Dave Rolsky.
 
 This is free software, licensed under:
 
