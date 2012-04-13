@@ -1,11 +1,10 @@
 package File::ChangeNotify;
 {
-  $File::ChangeNotify::VERSION = '0.21';
+  $File::ChangeNotify::VERSION = '0.22';
 }
 
 use strict;
 use warnings;
-use 5.010;
 
 use Carp qw( confess );
 use Class::Load qw( load_class );
@@ -78,7 +77,7 @@ File::ChangeNotify - Watch for changes to files, cross-platform style
 
 =head1 VERSION
 
-version 0.21
+version 0.22
 
 =head1 SYNOPSIS
 

@@ -39,7 +39,7 @@ my %module_build_args = (
     "Dave Rolsky <autarch\@urth.org>"
   ],
   "dist_name" => "File-ChangeNotify",
-  "dist_version" => "0.21",
+  "dist_version" => "0.22",
   "license" => "artistic_2",
   "module_name" => "File::ChangeNotify",
   "recommends" => {},
@@ -57,7 +57,6 @@ my %module_build_args = (
     "MooseX::SemiAffordanceAccessor" => 0,
     "Time::HiRes" => 0,
     "namespace::autoclean" => 0,
-    "perl" => "5.010",
     "strict" => 0,
     "warnings" => 0
   },

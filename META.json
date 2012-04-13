@@ -4,7 +4,7 @@
       "Dave Rolsky <autarch@urth.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300006, CPAN::Meta::Converter version 2.113640",
+   "generated_by" : "Dist::Zilla version 4.300014, CPAN::Meta::Converter version 2.120900",
    "license" : [
       "artistic_2"
    ],
@@ -26,33 +26,32 @@
       },
       "runtime" : {
          "requires" : {
-            "Carp" : 0,
-            "Class::Load" : 0,
-            "File::Find" : 0,
-            "File::Spec" : 0,
-            "List::MoreUtils" : 0,
-            "Module::Pluggable::Object" : 0,
-            "Moose" : 0,
-            "Moose::Util::TypeConstraints" : 0,
-            "MooseX::Params::Validate" : 0,
-            "MooseX::SemiAffordanceAccessor" : 0,
-            "Time::HiRes" : 0,
-            "namespace::autoclean" : 0,
-            "perl" : "5.010",
-            "strict" : 0,
-            "warnings" : 0
+            "Carp" : "0",
+            "Class::Load" : "0",
+            "File::Find" : "0",
+            "File::Spec" : "0",
+            "List::MoreUtils" : "0",
+            "Module::Pluggable::Object" : "0",
+            "Moose" : "0",
+            "Moose::Util::TypeConstraints" : "0",
+            "MooseX::Params::Validate" : "0",
+            "MooseX::SemiAffordanceAccessor" : "0",
+            "Time::HiRes" : "0",
+            "namespace::autoclean" : "0",
+            "strict" : "0",
+            "warnings" : "0"
          }
       },
       "test" : {
          "requires" : {
-            "Data::Dumper" : 0,
-            "Exporter" : 0,
-            "File::Path" : 0,
-            "File::Temp" : 0,
-            "FindBin" : 0,
-            "Test::Exception" : 0,
-            "Test::More" : 0,
-            "base" : 0
+            "Data::Dumper" : "0",
+            "Exporter" : "0",
+            "File::Path" : "0",
+            "File::Temp" : "0",
+            "FindBin" : "0",
+            "Test::Exception" : "0",
+            "Test::More" : "0",
+            "base" : "0"
          }
       }
    },
@@ -68,6 +67,6 @@
          "web" : "http://git.urth.org/File-ChangeNotify.git"
       }
    },
-   "version" : "0.21"
+   "version" : "0.22"
 }
 

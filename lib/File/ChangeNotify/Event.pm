@@ -1,6 +1,6 @@
 package File::ChangeNotify::Event;
 {
-  $File::ChangeNotify::Event::VERSION = '0.21';
+  $File::ChangeNotify::Event::VERSION = '0.22';
 }
 
 use strict;
@@ -38,7 +38,7 @@ File::ChangeNotify::Event - Class for file change events
 
 =head1 VERSION
 
-version 0.21
+version 0.22
 
 =head1 SYNOPSIS
 
