@@ -39,7 +39,7 @@ my %module_build_args = (
     "Dave Rolsky <autarch\@urth.org>"
   ],
   "dist_name" => "File-ChangeNotify",
-  "dist_version" => "0.22",
+  "dist_version" => "0.23",
   "license" => "artistic_2",
   "module_name" => "File::ChangeNotify",
   "recommends" => {},

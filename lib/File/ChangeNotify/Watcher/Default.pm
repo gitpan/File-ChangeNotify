@@ -1,6 +1,6 @@
 package File::ChangeNotify::Watcher::Default;
 {
-  $File::ChangeNotify::Watcher::Default::VERSION = '0.22';
+  $File::ChangeNotify::Watcher::Default::VERSION = '0.23';
 }
 
 use strict;
@@ -161,7 +161,7 @@ __PACKAGE__->meta()->make_immutable();
 
 # ABSTRACT: Fallback default watcher subclass
 
-
+__END__
 
 =pod
 
@@ -171,7 +171,7 @@ File::ChangeNotify::Watcher::Default - Fallback default watcher subclass
 
 =head1 VERSION
 
-version 0.22
+version 0.23
 
 =head1 DESCRIPTION
 
@@ -187,14 +187,10 @@ Dave Rolsky <autarch@urth.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2012 by Dave Rolsky.
+This software is Copyright (c) 2013 by Dave Rolsky.
 
 This is free software, licensed under:
 
   The Artistic License 2.0 (GPL Compatible)
 
 =cut
-
-
-__END__
-

@@ -1,6 +1,6 @@
 package File::ChangeNotify;
 {
-  $File::ChangeNotify::VERSION = '0.22';
+  $File::ChangeNotify::VERSION = '0.23';
 }
 
 use strict;
@@ -67,7 +67,7 @@ sub _all_classes {
 
 # ABSTRACT: Watch for changes to files, cross-platform style
 
-
+__END__
 
 =pod
 
@@ -77,7 +77,7 @@ File::ChangeNotify - Watch for changes to files, cross-platform style
 
 =head1 VERSION
 
-version 0.22
+version 0.23
 
 =head1 SYNOPSIS
 
@@ -156,14 +156,10 @@ Dave Rolsky <autarch@urth.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2012 by Dave Rolsky.
+This software is Copyright (c) 2013 by Dave Rolsky.
 
 This is free software, licensed under:
 
   The Artistic License 2.0 (GPL Compatible)
 
 =cut
-
-
-__END__
-

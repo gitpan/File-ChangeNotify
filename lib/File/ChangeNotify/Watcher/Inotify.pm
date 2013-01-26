@@ -1,6 +1,6 @@
 package File::ChangeNotify::Watcher::Inotify;
 {
-  $File::ChangeNotify::Watcher::Inotify::VERSION = '0.22';
+  $File::ChangeNotify::Watcher::Inotify::VERSION = '0.23';
 }
 
 use strict;
@@ -21,9 +21,12 @@ has is_blocking => (
 );
 
 has _inotify => (
-    is       => 'ro',
-    isa      => 'Linux::Inotify2',
-    default  => sub { Linux::Inotify2->new() },
+    is      => 'ro',
+    isa     => 'Linux::Inotify2',
+    default => sub {
+        Linux::Inotify2->new()
+            or die "Cannot construct a Linux::Inotify2 object: $!";
+    },
     init_arg => undef,
 );
 
@@ -75,9 +78,9 @@ sub _interesting_events {
 
     my @interesting;
 
-    # This is a blocking read, so it will not return until
-    # something happens. The restarter will end up calling ->watch
-    # again after handling the changes.
+    # This may be a blocking read, in which case it will not return until
+    # something happens. For Catalyst, the restarter will end up calling
+    # ->watch again after handling the changes.
     for my $event ( $self->_inotify()->read() ) {
         # An excluded path will show up here if ...
         #
@@ -208,7 +211,7 @@ __PACKAGE__->meta()->make_immutable();
 
 # ABSTRACT: Inotify-based watcher subclass
 
-
+__END__
 
 =pod
 
@@ -218,7 +221,7 @@ File::ChangeNotify::Watcher::Inotify - Inotify-based watcher subclass
 
 =head1 VERSION
 
-version 0.22
+version 0.23
 
 =head1 DESCRIPTION
 
@@ -234,14 +237,10 @@ Dave Rolsky <autarch@urth.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2012 by Dave Rolsky.
+This software is Copyright (c) 2013 by Dave Rolsky.
 
 This is free software, licensed under:
 
   The Artistic License 2.0 (GPL Compatible)
 
 =cut
-
-
-__END__
-

@@ -1,6 +1,6 @@
 package File::ChangeNotify::Watcher::KQueue;
 {
-  $File::ChangeNotify::Watcher::KQueue::VERSION = '0.22';
+  $File::ChangeNotify::Watcher::KQueue::VERSION = '0.23';
 }
 
 use strict;
@@ -61,7 +61,7 @@ sub new_events {
 sub _get_events {
     my ( $self, $timeout ) = @_;
 
-    my @kevents = $self->_kqueue->kevent( $timeout || () );
+    my @kevents = $self->_kqueue->kevent( defined $timeout ? $timeout : () );
 
     # Events come in groups, wait for a short period to absorb any extra ones
     # that might happen immediately after the ones we've detected.
@@ -247,7 +247,7 @@ Dan Thomas, E<lt>dan@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2010 by Dave Rolsky.
+This software is Copyright (c) 2013 by Dave Rolsky.
 
 This is free software, licensed under:
 

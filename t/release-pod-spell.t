@@ -36,5 +36,6 @@ OpenBSD
 PayPal
 Rolsky
 distro
+subclasses
 subdirectories
 userspace

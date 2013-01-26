@@ -1,6 +1,6 @@
 package File::ChangeNotify::Event;
 {
-  $File::ChangeNotify::Event::VERSION = '0.22';
+  $File::ChangeNotify::Event::VERSION = '0.23';
 }
 
 use strict;
@@ -28,7 +28,7 @@ __PACKAGE__->meta()->make_immutable();
 
 # ABSTRACT: Class for file change events
 
-
+__END__
 
 =pod
 
@@ -38,7 +38,7 @@ File::ChangeNotify::Event - Class for file change events
 
 =head1 VERSION
 
-version 0.22
+version 0.23
 
 =head1 SYNOPSIS
 
@@ -85,14 +85,10 @@ Dave Rolsky <autarch@urth.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2012 by Dave Rolsky.
+This software is Copyright (c) 2013 by Dave Rolsky.
 
 This is free software, licensed under:
 
   The Artistic License 2.0 (GPL Compatible)
 
 =cut
-
-
-__END__
-
