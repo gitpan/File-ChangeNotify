@@ -1,12 +1,13 @@
 package File::ChangeNotify::Watcher;
 {
-  $File::ChangeNotify::Watcher::VERSION = '0.23';
+  $File::ChangeNotify::Watcher::VERSION = '0.24';
 }
 
 use strict;
 use warnings;
 use namespace::autoclean;
 
+use Class::Load qw( load_class );
 use File::ChangeNotify::Event;
 use List::MoreUtils qw(all);
 use Moose;
@@ -72,7 +73,7 @@ has exclude => (
 sub BUILD {
     my $self = shift;
 
-    Class::MOP::load_class( $self->event_class() );
+    load_class( $self->event_class() );
 }
 
 sub new_events {
@@ -131,7 +132,7 @@ File::ChangeNotify::Watcher - Base class for all watchers
 
 =head1 VERSION
 
-version 0.23
+version 0.24
 
 =head1 SYNOPSIS
 

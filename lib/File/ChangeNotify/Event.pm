@@ -1,6 +1,6 @@
 package File::ChangeNotify::Event;
 {
-  $File::ChangeNotify::Event::VERSION = '0.23';
+  $File::ChangeNotify::Event::VERSION = '0.24';
 }
 
 use strict;
@@ -38,12 +38,17 @@ File::ChangeNotify::Event - Class for file change events
 
 =head1 VERSION
 
-version 0.23
+version 0.24
 
 =head1 SYNOPSIS
 
-    for my $event ( $watcher->new_events() )
-    {
+    my $watcher = File::ChangeNotify->instantiate_watcher(
+        directories => [ '/my/path', '/my/other' ],
+        filter      => qr/\.(?:pm|conf|yml)$/,
+        exclude => [ 't', 'root', qr(/(?!\.)[^/]+$) ],
+    );
+
+    for my $event ( $watcher->new_events() ) {
         print $event->path(), ' - ', $event->type(), "\n";
     }
 

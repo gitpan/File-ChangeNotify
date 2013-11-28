@@ -1,6 +1,6 @@
 package File::ChangeNotify::Watcher::KQueue;
 {
-  $File::ChangeNotify::Watcher::KQueue::VERSION = '0.23';
+  $File::ChangeNotify::Watcher::KQueue::VERSION = '0.24';
 }
 
 use strict;
@@ -244,13 +244,5 @@ Thomas or other BSD users before releasing.
 =head1 AUTHOR
 
 Dan Thomas, E<lt>dan@cpan.orgE<gt>
-
-=head1 COPYRIGHT AND LICENSE
-
-This software is Copyright (c) 2013 by Dave Rolsky.
-
-This is free software, licensed under:
-
-  The Artistic License 2.0
 
 =cut

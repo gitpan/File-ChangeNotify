@@ -15,13 +15,13 @@ lib/File/ChangeNotify/Watcher/Default.pm
 lib/File/ChangeNotify/Watcher/Inotify.pm
 lib/File/ChangeNotify/Watcher/KQueue.pm
 t/all.t
+t/author-pod-spell.t
 t/excluded-dirs.t
 t/instantiate-twice.t
 t/lib/File/ChangeNotify/TestHelper.pm
 t/release-cpan-changes.t
 t/release-eol.t
-t/release-pod-coverage.t
 t/release-pod-no404s.t
-t/release-pod-spell.t
 t/release-pod-syntax.t
+t/release-synopsis.t
 t/release-try-load.t

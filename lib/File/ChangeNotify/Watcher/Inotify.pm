@@ -1,6 +1,6 @@
 package File::ChangeNotify::Watcher::Inotify;
 {
-  $File::ChangeNotify::Watcher::Inotify::VERSION = '0.23';
+  $File::ChangeNotify::Watcher::Inotify::VERSION = '0.24';
 }
 
 use strict;
@@ -221,7 +221,7 @@ File::ChangeNotify::Watcher::Inotify - Inotify-based watcher subclass
 
 =head1 VERSION
 
-version 0.23
+version 0.24
 
 =head1 DESCRIPTION
 
